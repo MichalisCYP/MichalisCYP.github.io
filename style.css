@@ -4,8 +4,8 @@
   font-family: "Popoins", sans-serif;
   box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 body {
   background: #080808;
@@ -82,7 +82,7 @@ nav ul li a:hover::after {
   padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
-  color: #ababab;
+  color: #ffff;
 }
 
 .row {
@@ -143,12 +143,17 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-  color: #b54769;
+  color: #d2ffeb;
   font-size: 14px;
 }
 
 .tab-contents {
   display: none;
+}
+
+.sub-list-exp {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 .tab-contents.active-tab {
@@ -260,159 +265,155 @@ nav ul li a:hover::after {
 .work:hover .layer {
   height: 100%;
 }
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #a6ff00;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: white;
-    transition: background 0.5s;
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #a6ff00;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.5s;
 }
-.btn:hover{
-    background: #a6ff00;
+.btn:hover {
+  background: #a6ff00;
 }
 
 /*Contact-----------------*/
-.contact-left{
-    flex-basis: 35%;
-
-
+.contact-left {
+  flex-basis: 35%;
 }
-.contact-right{
-    flex-basis: 60%;
-    
-
+.contact-right {
+  flex-basis: 60%;
 }
 
-.contact-left p{
-    margin-top: 30px;
+.contact-left p {
+  margin-top: 30px;
 }
-.contact-left p i{
-    color: #a6ff00;
-    margin-right: 15px;
-    font-size: 25px;
+.contact-left p i {
+  color: #a6ff00;
+  margin-right: 15px;
+  font-size: 25px;
 }
-.social-icons{
-    margin-top: 30px;
+.social-icons {
+  margin-top: 30px;
 }
-.social-icons a{
-    margin-right: 15px;
-    font-size: 30px;
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.social-icons a:hover{
-    color: #a6ff00;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #a6ff00;
-}
-.contact-right form{
-    width: 100%;
-
-}
-form input,form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
+.social-icons a {
+  margin-right: 15px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.5s;
 }
 
-nav .fa-solid{
-    display: none;
+.social-icons a:hover {
+  color: #a6ff00;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #a6ff00;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+nav .fa-solid {
+  display: none;
 }
 /*CSS For small screens */
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url("images/phone-background.png");
-    }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: #a6ff00;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2; /*on top of everything*/
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px 25px;
-        align-items: center;
-        
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    .sub-title{
-        font-size: 40px;
-    }
-    .about-col-1,.about-col-2{
-        flex-basis: 100%;
-    }
-    .about-col-1{
-        margin-bottom: 30px;
-    }
-    .about-col-2{
-        font-size: 14px;
-    }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
-    }
-    .contact-left,.contact-right{
-        flex-basis: 100%;
-    }
-    .copyright{
-        font-size: 14px;
-    }
-}
-#msg{
-    color: #61b752;
-    margin-top: -40px;
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url("images/phone-background.png");
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  nav .fa-solid {
     display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #a6ff00;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2; /*on top of everything*/
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px 25px;
+    align-items: center;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+}
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
 }
