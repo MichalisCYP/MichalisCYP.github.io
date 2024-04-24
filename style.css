@@ -144,7 +144,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
   color:white;
-  font-size: 14px;
+  font-size: 20px;
   text-decoration: underline;
 }
 
@@ -152,10 +152,10 @@ nav ul li a:hover::after {
   display: none;
 }
 
-.sub-list-exp {
+/* .sub-list-exp {
     list-style-type: disc;
     margin-left: 20px;
-}
+} */
 
 .tab-contents.active-tab {
   display: block;
@@ -188,6 +188,11 @@ nav ul li a:hover::after {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
+  color: white;
+}
+.services-list div p {
+  font-size: 15px;
+  font-weight: 300;
 }
 .services-list div a {
   text-decoration: none;
