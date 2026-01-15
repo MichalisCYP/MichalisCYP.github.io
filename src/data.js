@@ -88,7 +88,7 @@ const DATA = {
         "C# .NET application connecting to a server simulating flight, integrating with Arduino for control. Applied C# principles: Delegates, Events, Networking.",
       tags: ["C# .NET", "Arduino", "Networking"],
       github: "https://github.com/",
-      images: [],
+      images: ["/images/flight1.jpeg"],
       dates: "Sep 2024 - Dec 2024",
       org: "University of South Wales",
     },
@@ -303,24 +303,14 @@ const DATA = {
     },
   ],
 
-  skills: {
-    soft: [
-      "Communication - collaborated with staff, mentored students, worked in a group",
-      "Teamwork & collaboration - agile methodologies, Git version control",
-      "Stakeholder engagement - presented to university senior staff",
-      "Adaptability - quick to learn and apply new tech",
-      "Problem-solving - project design, deployment",
-      "Time management - balanced work, study, personal projects",
-    ],
-    technical: [
-      "C++, C#, SQL, JavaScript, Python, Swift, Java, HTML, CSS, R, MATLAB",
-      "Object-Oriented Design, Algorithm Design, Data Structures, Complexity Analysis",
-      "System design thinking, Software Architecture, Design Patterns, SOLID Principles",
-      "React Native / mobile apps, SwiftUI, WatchOS",
-      "MySQL, MongoDB, Oracle - PL/SQL, Supabase (Firebase)",
-      "Docker, Git, Microsoft Azure, Expo, Arduino, Cisco Packet Tracer",
-    ],
-  },
+  soft_skills: [
+    "Communication - collaborated with staff, mentored students, worked in a group",
+    "Teamwork & collaboration - agile methodologies, Git version control",
+    "Stakeholder engagement - presented to university senior staff",
+    "Adaptability - quick to learn and apply new tech",
+    "Problem-solving - project design, deployment",
+    "Time management - balanced work, study, personal projects",
+  ],
 
   work: [
     {
@@ -351,4 +341,5 @@ const DATA = {
     },
   ],
 };
+
 export default DATA;

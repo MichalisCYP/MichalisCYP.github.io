@@ -2,6 +2,7 @@ import React from "react";
 
 const Timeline = () => (
   <div className="timeline-card-scroll">
+    <h2 className="timeline-title">My journey</h2>
     <div className="timeline-card">
       <div className="timeline-item">
         <img src="/images/cardiff1.jpeg" alt="MSc Advanced Computer Science" />

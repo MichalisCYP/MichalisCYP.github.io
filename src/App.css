@@ -1,3 +1,11 @@
+/* Header sticky and background fix */
+.site-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -401,6 +409,9 @@ a:hover {
   height: 42px;
   font-size: 18px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-meta {
@@ -450,6 +461,51 @@ a:hover {
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 20px 0;
+}
+
+/* Font Awesome icons for project links */
+.icon-link {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 1.7em;
+  transition: color 0.2s;
+}
+.icon-link:hover {
+  color: #f39c12;
+}
+
+/* Improved grid and card styling for projects */
+.improved-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.improved-card {
+  background: #181818;
+  border: 1.5px solid #222;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+  padding: 24px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.improved-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.28);
+  transform: translateY(-4px) scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .improved-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .improved-card {
+    padding: 16px 8px 12px 8px;
+  }
 }
 
 /* MOBILE */

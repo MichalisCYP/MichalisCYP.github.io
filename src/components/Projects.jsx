@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import DATA from "../data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const getUniqueTags = (projects) => {
   const tags = new Set();
@@ -82,9 +84,9 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <div className="grid" aria-label="Projects list">
+        <div className="grid improved-grid" aria-label="Projects list">
           {filtered.map((p) => (
-            <div className="project-card" key={p.id}>
+            <div className="project-card improved-card" key={p.id}>
               <h4>{p.title}</h4>
               <div className="project-meta">
                 <span>{p.dates}</span>
@@ -103,24 +105,28 @@ const Projects = () => {
 
               <div className="links">
                 {p.github && (
-                  <a href={p.github} target="_blank" rel="noopener noreferrer">
-                    GitHub
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-link"
+                    aria-label="GitHub"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 )}
                 {p.youtube && (
-                  <a href={p.youtube} target="_blank" rel="noopener noreferrer">
-                    YouTube
+                  <a
+                    href={p.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-link"
+                    aria-label="YouTube"
+                  >
+                    <FontAwesomeIcon icon={faYoutube} />
                   </a>
                 )}
               </div>
-              {p.grade && <div className="project-grade">Grade: {p.grade}</div>}
-              {p.awards && (
-                <ul className="project-awards">
-                  {p.awards.map((a, i) => (
-                    <li key={i}>{a}</li>
-                  ))}
-                </ul>
-              )}
             </div>
           ))}
         </div>
