@@ -4,7 +4,7 @@ import DATA from "../data";
 const Work = () => (
   <section id="work" className="section">
     <div className="container">
-      <h2>Work Experience</h2>
+      <h2 className="heading">Work Experience</h2>
       <div
         id="workList"
         className="grid improved-grid"

@@ -156,20 +156,22 @@ const Projects = () => {
     setExpanded(false); // Collapse when filters change
   }, [filters]);
 
-  // Scroll to last visible project when collapsing
+  // Scroll to last visible project only when collapsing (not on initial load)
+  const prevExpanded = useRef(expanded);
   useEffect(() => {
-    if (!expanded && lastProjectRef.current) {
+    if (prevExpanded.current && !expanded && lastProjectRef.current) {
       lastProjectRef.current.scrollIntoView({
         behavior: "smooth",
         block: "center",
       });
     }
+    prevExpanded.current = expanded;
   }, [expanded]);
 
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2>Projects and Technical Skills</h2>
+        <h2 className="heading">Projects and Technical Skills</h2>
         <div className="card">
           <div className="filter-header flex-center">
             <p className="muted">Tap to filter projects. Tap again to clear.</p>

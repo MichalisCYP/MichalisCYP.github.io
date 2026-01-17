@@ -23,7 +23,7 @@ library.add(
 const Skills = () => (
   <section id="skills" className="section">
     <div className="container">
-      <h2>Skills</h2>
+      <h2 className="heading">Skills</h2>
       <div className="card">
         <ul id="softSkills" className="skills-list flex-center gap">
           {DATA.soft_skills.map((skill) => (

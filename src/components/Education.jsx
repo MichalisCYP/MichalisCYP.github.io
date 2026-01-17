@@ -7,7 +7,7 @@ const Education = () => {
   return (
     <section id="education" className="section">
       <div className="container">
-        <h2>Education & Modules</h2>
+        <h2 className="heading">Education & Modules</h2>
         <div className="stack flex-col gap" aria-label="Education list">
           {education.map((e, i) => (
             <div className="card radius shadow" key={i}>

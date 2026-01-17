@@ -46,7 +46,12 @@ const Hero = () => {
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </a>
               <span className="sep">|</span>
-              <a id="downloadCV" href="/cv.pdf" download className="button">
+              <a
+                id="downloadCV"
+                href="/MichalisCYP.github.io/images/MichaelKaramichalisCV.pdf"
+                download
+                className="button"
+              >
                 Download CV
               </a>
               <span className="sep">|</span>
