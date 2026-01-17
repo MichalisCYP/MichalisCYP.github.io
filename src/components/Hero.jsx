@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="avatar" aria-label="Profile picture placeholder">
             <img
               id="profilePic"
-              src="/images/profile.jpeg"
+              src="/MichalisCYP.github.io/images/profile.jpeg"
               alt="Profile Picture"
               className="avatar-img"
             />
