@@ -224,8 +224,8 @@ const Projects = () => {
               >
                 <h4>{p.title}</h4>
                 <div className="project-meta">
-                  <span>{p.dates}</span>
                   {p.org && <span>{p.org}</span>}
+                  <span>{p.dates}</span>
                 </div>
                 <Carousel images={p.images} youtube={p.youtube} />
                 <p>{p.description}</p>
