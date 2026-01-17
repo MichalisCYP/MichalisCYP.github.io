@@ -8,9 +8,22 @@ const Hero = () => {
   const { name, tagline, profile, links } = DATA.person;
   return (
     <section id="about" className="section">
-      <div className="container">
-        <div className="hero flex-center gap">
-          <div className="avatar" aria-label="Profile picture placeholder">
+      <div style={{ alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            marginTop: "2rem",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* avatar */}
+          <div
+            className="avatar"
+            aria-label="Profile picture"
+            style={{ marginRight: "2rem" }}
+          >
             <img
               id="profilePic"
               src="/MichalisCYP.github.io/images/profile.jpeg"
@@ -18,16 +31,20 @@ const Hero = () => {
               className="avatar-img"
             />
           </div>
-          <div className="hero-text flex-col flex-center">
-            <h1 id="name">{name}</h1>
-            <p id="tagline" className="tagline">
-              {tagline}
-            </p>
-            {/* <p id="profile" className="profile">
-              {profile}
-            </p> */}
+          {/* hero info (text + links) */}
+          <div
+            style={{
+              maxWidth: "50%",
+            }}
+          >
+            <div className="hero-text">
+              <h1 id="name">{name}</h1>
+              <p id="tagline" className="tagline">
+                {tagline}
+              </p>
+            </div>
 
-            <div className="links flex-center gap">
+            <div className="links">
               <a
                 id="githubLink"
                 href={links.github}

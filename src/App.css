@@ -1,3 +1,18 @@
+/* Fade-in animation for lazy-loaded sections */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* =====================
    CSS OPTIMIZED & CLEANED
    ===================== */
@@ -153,6 +168,8 @@ a:hover {
   display: flex;
   align-items: center;
   height: 40px;
+  margin: 0 5px;
+  width: 200px;
 }
 .tag-rows {
   display: flex;
@@ -173,7 +190,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   gap: 6px;
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 .education-awards {
   display: flex;
@@ -503,6 +520,7 @@ a:hover {
 }
 .hero {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
@@ -523,17 +541,25 @@ a:hover {
   object-fit: cover;
   display: block;
 }
+.hero-text {
+  max-width: 80%;
+  /* min-width: 200px; */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
 .hero-text h1 {
   margin: 0;
   font-size: 36px;
-  text-align: center;
+  text-align: left;
 }
 .links {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 30px;
-  margin: 20px 0 10px;
+  margin: 40px 0 10px;
   font-size: 25px;
 }
 .sep {
@@ -541,7 +567,6 @@ a:hover {
 }
 .tagline {
   margin: 0;
-  text-align: center;
   color: var(--sub);
 }
 

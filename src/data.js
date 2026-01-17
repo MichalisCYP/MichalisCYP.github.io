@@ -402,6 +402,62 @@ const DATA = {
       ],
     },
   ],
+  timeline: [
+    {
+      year: "09/2025",
+      desc: "Started MSc Advanced Computer Science",
+      image: "/MichalisCYP.github.io/images/cardiff1.jpeg",
+      alt: "MSc Advanced Computer Science",
+    },
+    {
+      year: "2025",
+      desc: "Summer",
+      image: "/MichalisCYP.github.io/images/cyprus2.jpeg",
+      alt: "2025 Summer",
+    },
+    {
+      year: "06/2025",
+      desc: "Graduated with BSc Computer Science",
+      image: "/MichalisCYP.github.io/images/cardiff2.jpeg",
+      alt: "BSc Computer Science Graduation",
+    },
+    {
+      year: "09/2024",
+      desc: "Started Year 3 and Student IT Role",
+      image: "/MichalisCYP.github.io/images/cardiff4.jpeg",
+      alt: "Started Year 3 and Student IT Role",
+    },
+    {
+      year: "2024",
+      desc: "Summer",
+      image: "/MichalisCYP.github.io/images/cyprus4.jpeg",
+      alt: "2024 Summer",
+    },
+    {
+      year: "09/2023",
+      desc: "Started Year 2 and Digital Mentor Role",
+      image: "/MichalisCYP.github.io/images/cardiff3.jpeg",
+      alt: "Digital Mentor",
+    },
+    {
+      year: "2023",
+      desc: "Summer",
+      image: "/MichalisCYP.github.io/images/cyprus1.jpeg",
+      alt: "2023 Summer",
+    },
+    {
+      year: "09/2022",
+      desc: "Started Year 1",
+      image: "/MichalisCYP.github.io/images/cardiff5.jpeg",
+      alt: "Year 1 Computer Science",
+    },
+    {
+      year: "08/2022",
+      desc: "Finished Military Service",
+      image: "/MichalisCYP.github.io/images/cyprus3.jpeg",
+      alt: "Military Service",
+    },
+  ],
 };
 
 export default DATA;
