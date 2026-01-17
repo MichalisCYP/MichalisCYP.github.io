@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <div className="hero">
+        <div className="hero flex-center gap">
           <div className="avatar" aria-label="Profile picture placeholder">
             <img
               id="profilePic"
@@ -18,7 +18,7 @@ const Hero = () => {
               className="avatar-img"
             />
           </div>
-          <div className="hero-text">
+          <div className="hero-text flex-col flex-center">
             <h1 id="name">{name}</h1>
             <p id="tagline" className="tagline">
               {tagline}
@@ -27,7 +27,7 @@ const Hero = () => {
               {profile}
             </p> */}
 
-            <div className="links">
+            <div className="links flex-center gap">
               <a
                 id="githubLink"
                 href={links.github}
@@ -51,11 +51,17 @@ const Hero = () => {
               </a>
               <span className="sep">|</span>
               <a id="emailMe" href={`mailto:${links.email}`} className="button">
-                <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: "0.5em" }} />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ marginRight: "0.5em" }}
+                />
               </a>
               <span className="sep">|</span>
               <a id="phoneMe" href={`tel:${links.phone}`} className="button">
-                <FontAwesomeIcon icon={faPhone} style={{ marginRight: "0.5em" }} />
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  style={{ marginRight: "0.5em" }}
+                />
               </a>
             </div>
           </div>

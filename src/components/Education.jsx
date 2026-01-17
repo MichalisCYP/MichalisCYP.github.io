@@ -8,11 +8,11 @@ const Education = () => {
     <section id="education" className="section">
       <div className="container">
         <h2>Education & Modules</h2>
-        <div className="stack" aria-label="Education list">
+        <div className="stack flex-col gap" aria-label="Education list">
           {education.map((e, i) => (
-            <div className="card" key={i}>
+            <div className="card radius shadow" key={i}>
               <h3>{e.degree}</h3>
-              <div className="education-meta">
+              <div className="education-meta flex-row gap">
                 <span>
                   {e.university}
                   <img
@@ -27,21 +27,23 @@ const Education = () => {
                 </span>
                 <span>{e.dates}</span>
               </div>
-              <div className="education-awards">
-                {e.grade && <span className="muted">{e.grade}</span>}
+              <div className="education-awards flex-row gap">
+                {e.grade && <span className="muted radius">{e.grade}</span>}
                 {e.awards &&
                   e.awards.map((award, idx) => (
-                    <span className="muted" key={award + idx}>{award}</span>
+                    <span className="muted radius" key={award + idx}>
+                      {award}
+                    </span>
                   ))}
               </div>
               {e.modules && (
-                <div className="modules-list">
+                <div className="modules-list flex-col gap">
                   {e.modules.map((m, j) => (
-                    <div className="module-card" key={j}>
+                    <div className="module-card radius shadow" key={j}>
                       <h4>{m.name}</h4>
                       {m.tags && (
                         <div
-                          className="chips"
+                          className="chips flex-center gap"
                           style={{
                             marginBottom: 8,
                             display: "flex",
@@ -50,7 +52,7 @@ const Education = () => {
                           }}
                         >
                           {m.tags.map((t) => (
-                            <span className="chip small" key={t}>
+                            <span className="chip small radius" key={t}>
                               {t}
                             </span>
                           ))}

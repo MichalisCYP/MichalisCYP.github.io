@@ -25,7 +25,7 @@ const Skills = () => (
     <div className="container">
       <h2>Skills</h2>
       <div className="card">
-        <ul id="softSkills" className="skills-list">
+        <ul id="softSkills" className="skills-list flex-center gap">
           {DATA.soft_skills.map((skill) => (
             <li key={skill.text}>
               <FontAwesomeIcon icon={skill.icon} />

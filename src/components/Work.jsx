@@ -11,7 +11,7 @@ const Work = () => (
         aria-label="Work experience list"
       >
         {DATA.work.map((job, idx) => (
-          <div key={idx} className="improved-card">
+          <div key={idx} className="improved-card shadow radius-md">
             <h3 className="work-role" style={{ marginBottom: 8 }}>
               {job.role}
             </h3>
@@ -34,7 +34,7 @@ const Work = () => (
                 {job.dates}
               </span>
             </div>
-            <div className="chips" style={{ marginTop: 8 }}>
+            <div className="chips flex-center gap" style={{ marginTop: 8 }}>
               {job.bullets &&
                 job.bullets.map((b, i) => (
                   <span

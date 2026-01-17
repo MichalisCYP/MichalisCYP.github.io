@@ -86,7 +86,7 @@ const Carousel = ({ images, youtube }) => {
   const goTo = (i) => setIndex((i + slides.length) % slides.length);
 
   return (
-    <div className="carousel">
+    <div className="carousel radius shadow">
       <div className="carousel-content">
         {hasVideo && index === 0 ? (
           <div className="carousel-video">
@@ -109,7 +109,7 @@ const Carousel = ({ images, youtube }) => {
         )}
       </div>
       {slides.length > 1 && (
-        <div className="carousel-controls">
+        <div className="carousel-controls flex-center">
           <button onClick={() => goTo(index - 1)} aria-label="Previous slide">
             &#8592;
           </button>
@@ -171,7 +171,7 @@ const Projects = () => {
       <div className="container">
         <h2>Projects and Technical Skills</h2>
         <div className="card">
-          <div className="filter-header">
+          <div className="filter-header flex-center">
             <p className="muted">Tap to filter projects. Tap again to clear.</p>
             {filters.length > 0 && (
               <button
@@ -187,7 +187,7 @@ const Projects = () => {
             {tagRowPairs.map((row, i) => (
               <div className="tag-row-wrap" key={i}>
                 {row.name && <span className="tag-row-label">{row.name}</span>}
-                <div className="chips tag-row">
+                <div className="chips tag-row flex-center gap">
                   {row.tags.map((tag) => {
                     const isActive = filters.includes(tag);
                     return (
@@ -212,33 +212,33 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <div className="grid improved-grid" aria-label="Projects list">
+        <div className="grid improved-grid gap" aria-label="Projects list">
           {visibleProjects.map((p, i) => {
             const isLast = !expanded && i === visibleProjects.length - 1;
             return (
               <div
-                className="project-card improved-card"
+                className="project-card improved-card shadow radius-md"
                 key={p.id}
                 data-anim={animKey}
                 ref={isLast ? lastProjectRef : null}
               >
                 <h4>{p.title}</h4>
-                <div className="project-meta">
+                <div className="project-meta flex-row gap">
                   {p.org && <span>{p.org}</span>}
                   <span>{p.dates}</span>
                 </div>
                 <Carousel images={p.images} youtube={p.youtube} />
                 <p>{p.description}</p>
 
-                <div className="project-tags">
+                <div className="project-tags flex-center gap">
                   {p.tags.map((t) => (
-                    <span className="chip small" key={t}>
+                    <span className="chip small radius" key={t}>
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <div className="links">
+                <div className="links flex-center gap">
                   {p.github && (
                     <a
                       href={p.github}

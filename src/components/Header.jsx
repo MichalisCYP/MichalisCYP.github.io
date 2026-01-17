@@ -2,9 +2,9 @@ import React from "react";
 
 const Header = () => (
   <header className="site-header">
-    <div className="container nav-wrap">
+    <div className="container nav-wrap flex-center gap">
       <img src="/images/cyprus.svg" alt="Logo" className="cyprus-flag" />
-      <nav className="nav" aria-label="Primary">
+      <nav className="nav flex-center gap" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
