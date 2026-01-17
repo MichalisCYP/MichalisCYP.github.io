@@ -1,12 +1,81 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import DATA from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
-const getUniqueTags = (projects) => {
+// Group tags by category (no text shown, just for grouping in rows)
+const TAG_CATEGORIES = [
+  {
+    name: "Languages",
+    tags: ["C++", "C# .NET", "JavaScript", "Java", "PL/SQL", "SwiftUI", "SQL"],
+  },
+  {
+    name: "Software Engineering",
+    tags: [
+      "Full-Stack",
+      "Design Patterns",
+      "SOLID Principles",
+      "Multithreading",
+      "Algorithms",
+      "Data Structures",
+    ],
+  },
+  {
+    name: "Frontend",
+    tags: ["Next.js", "UI UX Design", "React Native", "Expo"],
+  },
+
+  {
+    name: "Backend & Databases",
+    tags: ["Supabase", "MongoDB", "Database Design", "Procedures", "Triggers"],
+  },
+
+  {
+    name: "Mobile",
+    tags: ["Mobile", "iOS", "Android", "WatchOS", "SwiftUI", "React Native"],
+  },
+  {
+    name: "Embedded & IoT",
+    tags: ["Arduino", "Embedded Systems", "IoT"],
+  },
+
+  {
+    name: "Cloud & DevOps",
+    tags: ["Supabase", "AWS", "Docker"],
+  },
+
+  {
+    name: "Networking",
+    tags: [
+      "Cisco Packet Tracer",
+      "VLAN",
+      "TCP/IP",
+      "Sockets",
+      "Networking",
+      "DHCP",
+    ],
+  },
+];
+
+// Helper to get all unique tags in the data (for fallback/unknown tags)
+const getAllTags = (projects) => {
   const tags = new Set();
   projects.forEach((p) => p.tags.forEach((t) => tags.add(t)));
-  return Array.from(tags).sort();
+  return Array.from(tags);
+};
+
+// Group tags by category, preserving order in TAG_CATEGORIES, and put unknowns in a final row
+const groupTags = (allTags) => {
+  const used = new Set();
+  const rows = TAG_CATEGORIES.map((cat) => {
+    const row = cat.tags.filter((t) => allTags.includes(t));
+    row.forEach((t) => used.add(t));
+    return row;
+  });
+  // Add any tags not in categories as a final row
+  const unknowns = allTags.filter((t) => !used.has(t));
+  if (unknowns.length) rows.push(unknowns);
+  return rows.filter((row) => row.length > 0);
 };
 
 const Carousel = ({ images, youtube }) => {
@@ -58,78 +127,163 @@ const Carousel = ({ images, youtube }) => {
 
 const Projects = () => {
   const { projects } = DATA;
-  const tags = getUniqueTags(projects);
-  const [filter, setFilter] = useState(null);
 
-  const filtered = filter
-    ? projects.filter((p) => p.tags.includes(filter))
-    : projects;
+  const allTags = getAllTags(projects);
+  const tagRows = groupTags(allTags);
+
+  // For rendering: pair each row with its category name (or empty string for unknowns)
+  const tagRowPairs = tagRows.map((row, i) => ({
+    name: TAG_CATEGORIES[i]?.name || "",
+    tags: row,
+  }));
+  const [filters, setFilters] = useState([]);
+
+  const [animKey, setAnimKey] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+  const lastProjectRef = useRef(null);
+
+  const filtered =
+    filters.length > 0
+      ? projects.filter((p) => p.tags.some((tag) => filters.includes(tag)))
+      : projects;
+
+  // Show max 4 projects unless expanded
+  const visibleProjects = expanded ? filtered : filtered.slice(0, 4);
+
+  // Trigger animation key on filter change
+  useEffect(() => {
+    setAnimKey((k) => k + 1);
+    setExpanded(false); // Collapse when filters change
+  }, [filters]);
+
+  // Scroll to last visible project when collapsing
+  useEffect(() => {
+    if (!expanded && lastProjectRef.current) {
+      lastProjectRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [expanded]);
 
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2>Projects</h2>
+        <h2>Projects and Technical Skills</h2>
         <div className="card">
-          <h3>Technologies</h3>
-          <p className="muted">Tap to filter projects. Tap again to clear.</p>
-          <div className="chips" aria-label="Technology filters">
-            {tags.map((tag) => (
+          <div className="filter-header">
+            <p className="muted">Tap to filter projects. Tap again to clear.</p>
+            {filters.length > 0 && (
               <button
-                key={tag}
-                className={filter === tag ? "chip active" : "chip"}
-                onClick={() => setFilter(filter === tag ? null : tag)}
+                className="chip clear-chip"
+                onClick={() => setFilters([])}
+                aria-label="Clear filters"
               >
-                {tag}
+                Clear All Filters
               </button>
+            )}
+          </div>
+          <div className="tag-rows" aria-label="Technology filters">
+            {tagRowPairs.map((row, i) => (
+              <div className="tag-row-wrap" key={i}>
+                {row.name && <span className="tag-row-label">{row.name}</span>}
+                <div className="chips tag-row">
+                  {row.tags.map((tag) => {
+                    const isActive = filters.includes(tag);
+                    return (
+                      <button
+                        key={tag}
+                        className={isActive ? "chip active" : "chip"}
+                        onClick={() => {
+                          setFilters((prev) =>
+                            isActive
+                              ? prev.filter((t) => t !== tag)
+                              : [...prev, tag]
+                          );
+                        }}
+                        aria-pressed={isActive}
+                      >
+                        {tag}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             ))}
           </div>
         </div>
         <div className="grid improved-grid" aria-label="Projects list">
-          {filtered.map((p) => (
-            <div className="project-card improved-card" key={p.id}>
-              <h4>{p.title}</h4>
-              <div className="project-meta">
-                <span>{p.dates}</span>
-                {p.org && <span>{p.org}</span>}
-              </div>
-              <Carousel images={p.images} youtube={p.youtube} />
-              <p>{p.description}</p>
+          {visibleProjects.map((p, i) => {
+            const isLast = !expanded && i === visibleProjects.length - 1;
+            return (
+              <div
+                className="project-card improved-card"
+                key={p.id}
+                data-anim={animKey}
+                ref={isLast ? lastProjectRef : null}
+              >
+                <h4>{p.title}</h4>
+                <div className="project-meta">
+                  <span>{p.dates}</span>
+                  {p.org && <span>{p.org}</span>}
+                </div>
+                <Carousel images={p.images} youtube={p.youtube} />
+                <p>{p.description}</p>
 
-              <div className="project-tags">
-                {p.tags.map((t) => (
-                  <span className="chip small" key={t}>
-                    {t}
-                  </span>
-                ))}
-              </div>
+                <div className="project-tags">
+                  {p.tags.map((t) => (
+                    <span className="chip small" key={t}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
 
-              <div className="links">
-                {p.github && (
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="icon-link"
-                    aria-label="GitHub"
-                  >
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                )}
-                {p.youtube && (
-                  <a
-                    href={p.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="icon-link"
-                    aria-label="YouTube"
-                  >
-                    <FontAwesomeIcon icon={faYoutube} />
-                  </a>
-                )}
+                <div className="links">
+                  {p.github && (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="icon-link"
+                      aria-label="GitHub"
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  )}
+                  {p.youtube && (
+                    <a
+                      href={p.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="icon-link"
+                      aria-label="YouTube"
+                    >
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+        {filtered.length > 4 && (
+          <div style={{ textAlign: "center", marginTop: 24 }}>
+            <button
+              className="chip expand-chip big-expand"
+              style={{
+                fontSize: "1.25rem",
+                padding: "0.75em 2em",
+                minWidth: 180,
+                fontWeight: 600,
+                borderRadius: 24,
+              }}
+              onClick={() => setExpanded((e) => !e)}
+              aria-label={expanded ? "Collapse projects" : "Expand projects"}
+            >
+              {expanded ? "Collapse" : "Expand"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,18 +1,20 @@
 import React from "react";
+import DATA from "../data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Skills = () => (
   <section id="skills" className="section">
     <div className="container">
       <h2>Skills</h2>
-      <div className="grid">
-        <div className="card">
-          <h3>Soft Skills</h3>
-          <ul id="softSkills" className="list"></ul>
-        </div>
-        <div className="card">
-          <h3>Technical Snapshot</h3>
-          <ul id="techSkills" className="list"></ul>
-        </div>
+      <div className="card">
+        <ul id="softSkills" className="list">
+          {DATA.soft_skills.map((skill) => (
+            <li key={skill.text}>
+              <FontAwesomeIcon icon={skill.icon} />
+              {skill.text}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   </section>

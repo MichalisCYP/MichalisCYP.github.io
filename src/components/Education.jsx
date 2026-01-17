@@ -13,11 +13,26 @@ const Education = () => {
             <div className="card" key={i}>
               <h3>{e.degree}</h3>
               <div className="education-meta">
+                <span>
+                  {e.university}
+                  <img
+                    src={e.logo}
+                    alt={`${e.university} logo`}
+                    style={{
+                      height: 24,
+                      marginLeft: 8,
+                      verticalAlign: "middle",
+                    }}
+                  />
+                </span>
                 <span>{e.dates}</span>
+              </div>
+              <div className="education-awards">
                 {e.grade && <span className="muted">{e.grade}</span>}
-                {e.awards && (
-                  <span className="muted">{e.awards.join(" · ")}</span>
-                )}
+                {e.awards &&
+                  e.awards.map((award, idx) => (
+                    <span className="muted" key={award + idx}>{award}</span>
+                  ))}
               </div>
               {e.modules && (
                 <div className="modules-list">

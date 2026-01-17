@@ -28,6 +28,7 @@ const DATA = {
         "JavaScript",
         "AWS",
         "Supabase",
+        "Database Design",
       ],
       github: "https://github.com/",
       images: [
@@ -52,6 +53,8 @@ const DATA = {
         "Android",
         "SQL",
         "Supabase",
+        "UI UX Design",
+        "Database Design",
       ],
       github: "https://github.com/",
       youtube: "https://www.youtube.com/watch?v=dzGqEToWnqk",
@@ -60,6 +63,7 @@ const DATA = {
         "/images/SM2.jpg",
         "/images/SM3.jpg",
         "/images/SM4.jpg",
+        "/images/SM5.jpg",
       ],
       dates: "Sep 2024 - May 2025",
       org: "University of South Wales",
@@ -74,7 +78,14 @@ const DATA = {
       title: "Home Monitoring IoT System",
       description:
         "C++ system retrieving values from Arduino Microcontroller Sensors and activating actuators. Designed a physical Arduino Uno circuit and integrated with C++ using the ArduSerial library.",
-      tags: ["C++", "Arduino", "IoT", "Embedded Systems", "Design Patterns"],
+      tags: [
+        "C++",
+        "Arduino",
+        "IoT",
+        "Embedded Systems",
+        "Design Patterns",
+        "Multithreading",
+      ],
       youtube: "https://www.youtube.com/watch?v=kgoBjNTIa34",
       github: "https://github.com/",
       images: ["/images/IOT1.png", "/images/IOT2.jpg", "/images/IOT3.jpg"],
@@ -86,7 +97,7 @@ const DATA = {
       title: "Flight Simulator Controller integrated with Arduino",
       description:
         "C# .NET application connecting to a server simulating flight, integrating with Arduino for control. Applied C# principles: Delegates, Events, Networking.",
-      tags: ["C# .NET", "Arduino", "Networking"],
+      tags: ["C# .NET", "Arduino", "Networking", "Multithreading"],
       github: "https://github.com/",
       images: ["/images/flight1.jpeg"],
       dates: "Sep 2024 - Dec 2024",
@@ -97,7 +108,7 @@ const DATA = {
       title: "Coffee Shop GIS",
       description:
         "C# .NET application displaying stores and relevant data using Google Maps API, with data stored as GeoJSON in MongoDB.",
-      tags: ["C# .NET", "MongoDB", "GeoJSON", "Google Maps API"],
+      tags: ["C# .NET", "MongoDB"],
       github: "https://github.com/",
       youtube: "https://www.youtube.com/watch?v=MoXTc3iP_N4",
       images: [],
@@ -109,7 +120,7 @@ const DATA = {
       title: "Open Shortest Path First (OSPF) Routing Protocol Simulation",
       description:
         "TCP Client and Server through Java Socket Programming and Multithreading for simulated connections. Shortest Path Calculation using Dijkstra’s algorithm and each router’s link-state database.",
-      tags: ["Java", "Sockets", "Multithreading", "Dijkstra"],
+      tags: ["Java", "Sockets", "Multithreading"],
       github: "https://github.com/",
       youtube: "https://www.youtube.com/watch?v=30G5E18zF0g",
       images: ["/images/network1.png"],
@@ -133,7 +144,7 @@ const DATA = {
       title: "AquaBite iOS Application",
       description:
         "iOS SwiftUI application enabling self-tracking of food and liquid intake via WatchOS and iOS devices. Incorporated Swift Data, Notifications, Widgets, Apple’s Design Principles and Supabase Authentication.",
-      tags: ["SwiftUI", "iOS", "WatchOS", "Supabase", "Widgets"],
+      tags: ["SwiftUI", "iOS", "WatchOS", "Supabase", "UI UX Design"],
       github: "https://github.com/",
       youtube: "https://www.youtube.com/watch?v=BIIFefMx91Y",
       images: ["/images/ios1.png", "/images/ios2.png", "/images/ios3.png"],
@@ -145,7 +156,7 @@ const DATA = {
       title: "AVL Tree Scheduler Implementation",
       description:
         "Implemented an AVL Tree in C++ to manage and schedule processes based on priority. Ensured balanced tree structure for optimal search, insertion, and deletion operations.",
-      tags: ["C++", "Data Structures", "Algorithms", "AVL Tree"],
+      tags: ["C++", "Data Structures", "Algorithms"],
       github: "",
       youtube: "https://www.youtube.com/watch?v=ztVPiFrof7w",
       images: [],
@@ -176,7 +187,7 @@ const DATA = {
       title: "PL/SQL Database Management System",
       description:
         "Designed and implemented a database management system using PL/SQL for a hypothetical retail company. Created complex queries, stored procedures, and triggers to manage inventory, sales, and customer data effectively.",
-      tags: ["PL/SQL", "Database Design", "Stored Procedures", "Triggers"],
+      tags: ["PL/SQL", "Database Design", "Procedures", "Triggers"],
       github: "",
       images: ["/images/plsql.png"],
       dates: "Jan 2023 - Apr 2023",
@@ -186,7 +197,9 @@ const DATA = {
 
   education: [
     {
-      degree: "MSc Advanced Computer Science — Cardiff University",
+      degree: "MSc Advanced Computer Science",
+      university: "Cardiff University",
+      logo: "/images/cardiffuni.svg",
       dates: "Sep 2025 - Sep 2026",
       modules: [
         {
@@ -239,7 +252,9 @@ const DATA = {
       ],
     },
     {
-      degree: "BSc Computer Science — University of South Wales",
+      degree: "BSc Computer Science (Hons)",
+      university: "University of South Wales",
+      logo: "/images/usw.svg",
       dates: "Sep 2022 - Jul 2025",
       grade: "First-Class Honours - 86.25%",
       awards: [
@@ -293,6 +308,8 @@ const DATA = {
     {
       degree: "Cyprus High School Apolyterion, Cyprus",
       dates: "Sep 2018 - Jun 2021",
+      logo: "/images/kykkos.png",
+      university: "Kykkos A' Lyceum",
       grade: "18.50/20.00 - Graduated with Honours",
       modules: [
         { name: "Computer Science - C++" },
@@ -304,12 +321,30 @@ const DATA = {
   ],
 
   soft_skills: [
-    "Communication - collaborated with staff, mentored students, worked in a group",
-    "Teamwork & collaboration - agile methodologies, Git version control",
-    "Stakeholder engagement - presented to university senior staff",
-    "Adaptability - quick to learn and apply new tech",
-    "Problem-solving - project design, deployment",
-    "Time management - balanced work, study, personal projects",
+    {
+      text: "Communication - collaborated with staff, mentored students, worked in a group",
+      icon: "fa-solid fa-comments",
+    },
+    {
+      text: "Teamwork & collaboration - agile methodologies, Git version control",
+      icon: "fa-solid fa-people-group",
+    },
+    {
+      text: "Stakeholder engagement - presented to university senior staff",
+      icon: "fa-solid fa-handshake",
+    },
+    {
+      text: "Adaptability - quick to learn and apply new tech",
+      icon: "fa-solid fa-person-running",
+    },
+    {
+      text: "Problem-solving - project design, deployment",
+      icon: "fa-solid fa-lightbulb",
+    },
+    {
+      text: "Time management - balanced work, study, personal projects",
+      icon: "fa-solid fa-clock",
+    },
   ],
 
   work: [
@@ -318,8 +353,14 @@ const DATA = {
       org: "University of South Wales",
       dates: "Sep 2024 - Jun 2025",
       bullets: [
-        "Efficiently resolved and diagnosed software and network issues.",
-        "Managed university accounts and devices through Microsoft Azure.",
+        {
+          text: "Efficiently resolved and diagnosed software and network issues.",
+          icon: "fa-solid fa-screwdriver-wrench",
+        },
+        {
+          text: "Managed university accounts and devices through Microsoft Azure.",
+          icon: "fa-brands fa-microsoft",
+        },
       ],
     },
     {
@@ -327,8 +368,14 @@ const DATA = {
       org: "University of South Wales",
       dates: "Jan 2024 – Jun 2025",
       bullets: [
-        "Mentored students for academic and technology related advice.",
-        "Directed students to university services and resources.",
+        {
+          text: "Mentored students for academic and technology related advice.",
+          icon: "fa-solid fa-user-graduate",
+        },
+        {
+          text: "Directed students to university services and resources.",
+          icon: "fa-solid fa-compass",
+        },
       ],
     },
     {
@@ -336,7 +383,10 @@ const DATA = {
       org: "Cyprus National Guard",
       dates: "Jul 2021 - Aug 2022",
       bullets: [
-        "Awarded the honorary rank of Lance Corporal for exceptional performance and conduct.",
+        {
+          text: "Awarded the honorary rank of Lance Corporal for exceptional performance and conduct.",
+          icon: "",
+        },
       ],
     },
   ],

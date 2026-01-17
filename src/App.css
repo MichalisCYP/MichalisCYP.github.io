@@ -1,3 +1,101 @@
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.filter-header .muted {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+.filter-header .clear-chip {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #111;
+  border: 2px solid #fff;
+  font-weight: 550;
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s,
+    transform 0.2s;
+  outline: none;
+  transform: translateY(-50%) scale(1);
+}
+.filter-header .clear-chip:hover {
+  background: #f2f2f2;
+  color: #222;
+  border-color: #eee;
+  box-shadow: 0 4px 16px 0 rgba(255, 255, 255, 0.22);
+}
+.tag-row-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 2px;
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.education-awards {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.education-awards .muted {
+  background: #232323;
+  color: #f8d47a;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.98em;
+  font-weight: 500;
+  margin-right: 6px;
+  border: 1px solid #f8d47a22;
+  box-shadow: 0 1px 6px 0 rgba(248, 212, 122, 0.08);
+  display: inline-block;
+}
+
+.tag-row-label {
+  min-width: 140px;
+  font-weight: 600;
+  color: var(--sub);
+  text-align: left;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.tag-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  min-height: 40px;
+}
 /* Header sticky and background fix */
 .site-header {
   background: #fff;
@@ -323,8 +421,9 @@ a:hover {
 }
 
 .card {
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  border-top: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
+  /* border-radius: 16px; */
   padding: 16px;
   margin-top: 16px;
 }
@@ -350,7 +449,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .chip {
@@ -363,9 +462,24 @@ a:hover {
   font-size: 14px;
 }
 
+.chip:hover {
+  border: 1px solid #f89e30;
+}
+
+.chip.active {
+  background: #fff;
+  color: #111;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.18);
+  font-weight: 550;
+  transform: scale(1);
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s,
+    transform 0.2s;
+}
+
 .chip[aria-pressed="true"] {
-  outline: 2px solid var(--border);
-  outline-offset: 2px;
+  outline: 1.5px solid var(--border);
+  outline-offset: 1.5px;
 }
 
 .project-title {
@@ -474,6 +588,11 @@ a:hover {
   color: #f39c12;
 }
 
+/* Make YouTube icon red on hover */
+.icon-link[aria-label="YouTube"]:hover {
+  color: #ff0000;
+}
+
 /* Improved grid and card styling for projects */
 .improved-grid {
   display: grid;
@@ -492,6 +611,19 @@ a:hover {
   flex-direction: column;
   align-items: stretch;
   transition: box-shadow 0.2s, transform 0.2s;
+  opacity: 1;
+  animation: fadeInProject 0.5s;
+}
+
+@keyframes fadeInProject {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 .improved-card:hover {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.28);
