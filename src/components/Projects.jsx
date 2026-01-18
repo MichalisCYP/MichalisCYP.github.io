@@ -112,9 +112,9 @@ const Carousel = ({ images, youtube }) => {
           <button onClick={() => goTo(index - 1)} aria-label="Previous slide">
             &#8592;
           </button>
-          <span>
+          {/* <span>
             {index + 1} / {slides.length}
-          </span>
+          </span> */}
           <button onClick={() => goTo(index + 1)} aria-label="Next slide">
             &#8594;
           </button>
@@ -231,15 +231,7 @@ const Projects = () => {
                 <Carousel images={p.images} youtube={p.youtube} />
                 <p>{p.description}</p>
 
-                <div className="project-tags flex-center gap">
-                  {p.tags.map((t) => (
-                    <span className="chip small radius" key={t}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="links flex-center gap">
+                <div>
                   {p.github && (
                     <a
                       href={p.github}
@@ -256,6 +248,17 @@ const Projects = () => {
                           height: 48,
                         }}
                       />
+                      {p.private && (
+                        <text
+                          style={{
+                            fontSize: "12px",
+                            color: "#888",
+                            alignSelf: "center",
+                          }}
+                        >
+                          (Private)
+                        </text>
+                      )}
                     </a>
                   )}
                   {p.youtube && (
@@ -276,6 +279,14 @@ const Projects = () => {
                       />
                     </a>
                   )}
+                </div>
+
+                <div className="project-tags flex-center gap">
+                  {p.tags.map((t) => (
+                    <span className="chip small radius" key={t}>
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             );
