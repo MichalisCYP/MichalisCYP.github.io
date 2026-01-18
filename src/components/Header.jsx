@@ -44,7 +44,7 @@ const Header = () => {
     <header className={`site-header${showHeader ? "" : " header-hidden"}`}>
       <div className="container nav-wrap flex-center gap">
         <img
-          src="/MichalisCYP.github.io/images/cyprus.svg"
+          src="/images/cyprus.svg"
           alt="Logo"
           className="cyprus-flag"
         />

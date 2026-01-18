@@ -249,7 +249,7 @@ const Projects = () => {
                       aria-label="GitHub"
                     >
                       <img
-                        src="/MichalisCYP.github.io/images/github.svg"
+                        src="/images/github.svg"
                         alt="GitHub"
                         style={{
                           width: 48,
@@ -267,7 +267,7 @@ const Projects = () => {
                       aria-label="YouTube"
                     >
                       <img
-                        src="/MichalisCYP.github.io/images/youtube.svg"
+                        src="/images/youtube.svg"
                         alt="YouTube"
                         style={{
                           width: 48,
