@@ -23,7 +23,7 @@ const Hero = () => {
           >
             <img
               id="profilePic"
-              src="/MichalisCYP.github.io/images/profile.jpeg"
+              src="/images/profile.jpeg"
               alt="Profile Picture"
               className="avatar-img"
             />
@@ -49,7 +49,7 @@ const Hero = () => {
                 rel="noreferrer"
               >
                 <img
-                  src="/MichalisCYP.github.io/images/github.svg"
+                  src="/images/github.svg"
                   alt="GitHub"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
@@ -62,7 +62,7 @@ const Hero = () => {
                 rel="noreferrer"
               >
                 <img
-                  src="/MichalisCYP.github.io/images/linkedin.svg"
+                  src="/images/linkedin.svg"
                   alt="LinkedIn"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
@@ -70,7 +70,7 @@ const Hero = () => {
               <span className="sep">|</span>
               <a
                 id="downloadCV"
-                href="/MichalisCYP.github.io/images/MichaelKaramichalisCV.pdf"
+                href="/images/MichaelKaramichalisCV.pdf"
                 download
                 className="button"
               >
@@ -79,7 +79,7 @@ const Hero = () => {
               <span className="sep">|</span>
               <a id="emailMe" href={`mailto:${links.email}`} className="button">
                 <img
-                  src="/MichalisCYP.github.io/images/mail.svg"
+                  src="/images/mail.svg"
                   alt="Email"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
@@ -87,7 +87,7 @@ const Hero = () => {
               <span className="sep">|</span>
               <a id="phoneMe" href={`tel:${links.phone}`} className="button">
                 <img
-                  src="/MichalisCYP.github.io/images/phone.svg"
+                  src="/images/phone.svg"
                   alt="Phone"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
