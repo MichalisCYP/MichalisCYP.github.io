@@ -1,7 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import DATA from "../data";
 
 const Hero = () => {
@@ -51,7 +48,11 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faGithub} size="lg" />
+                <img
+                  src="/MichalisCYP.github.io/images/github.svg"
+                  alt="GitHub"
+                  style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                />
               </a>
               <span className="sep">|</span>
               <a
@@ -60,7 +61,11 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                <img
+                  src="/MichalisCYP.github.io/images/linkedin.svg"
+                  alt="LinkedIn"
+                  style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                />
               </a>
               <span className="sep">|</span>
               <a
@@ -73,16 +78,18 @@ const Hero = () => {
               </a>
               <span className="sep">|</span>
               <a id="emailMe" href={`mailto:${links.email}`} className="button">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  style={{ marginRight: "0.5em" }}
+                <img
+                  src="/MichalisCYP.github.io/images/mail.svg"
+                  alt="Email"
+                  style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
               </a>
               <span className="sep">|</span>
               <a id="phoneMe" href={`tel:${links.phone}`} className="button">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ marginRight: "0.5em" }}
+                <img
+                  src="/MichalisCYP.github.io/images/phone.svg"
+                  alt="Phone"
+                  style={{ width: 36, height: 36, verticalAlign: "middle" }}
                 />
               </a>
             </div>

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import DATA from "../data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
+// import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 // Group tags by category (no text shown, just for grouping in rows)
 const TAG_CATEGORIES = [
@@ -249,7 +248,14 @@ const Projects = () => {
                       className="icon-link"
                       aria-label="GitHub"
                     >
-                      <FontAwesomeIcon icon={faGithub} />
+                      <img
+                        src="/MichalisCYP.github.io/images/github.svg"
+                        alt="GitHub"
+                        style={{
+                          width: 48,
+                          height: 48,
+                        }}
+                      />
                     </a>
                   )}
                   {p.youtube && (
@@ -260,7 +266,14 @@ const Projects = () => {
                       className="icon-link"
                       aria-label="YouTube"
                     >
-                      <FontAwesomeIcon icon={faYoutube} />
+                      <img
+                        src="/MichalisCYP.github.io/images/youtube.svg"
+                        alt="YouTube"
+                        style={{
+                          width: 48,
+                          height: 48,
+                        }}
+                      />
                     </a>
                   )}
                 </div>
