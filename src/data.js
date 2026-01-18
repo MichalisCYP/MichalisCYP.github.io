@@ -30,7 +30,7 @@ const DATA = {
         "Supabase",
         "Database Design",
       ],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP",
       private: true,
       images: [
         "/images/AM1.png",
@@ -57,7 +57,7 @@ const DATA = {
         "UI UX Design",
         "Database Design",
       ],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP",
       private: true,
       youtube: "https://www.youtube.com/watch?v=dzGqEToWnqk",
       images: [
@@ -89,7 +89,7 @@ const DATA = {
         "Multithreading",
       ],
       youtube: "https://www.youtube.com/watch?v=kgoBjNTIa34",
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP/SmartHotelSystem",
       private: false,
       images: ["/images/IOT1.png", "/images/IOT2.jpg", "/images/IOT3.jpg"],
       dates: "Sep 2024 - May 2025",
@@ -101,7 +101,7 @@ const DATA = {
       description:
         "C# .NET application connecting to a server simulating flight, integrating with Arduino for control. Applied C# principles: Delegates, Events, Networking.",
       tags: ["C# .NET", "Arduino", "Networking", "Multithreading"],
-      github: "https://github.com/",
+      github: "",
       private: false,
       images: ["/images/flight1.jpeg"],
       dates: "Sep 2024 - Dec 2024",
@@ -113,7 +113,7 @@ const DATA = {
       description:
         "C# .NET application displaying stores and relevant data using Google Maps API, with data stored as GeoJSON in MongoDB.",
       tags: ["C# .NET", "MongoDB"],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP",
       youtube: "https://www.youtube.com/watch?v=MoXTc3iP_N4",
       private: false,
       images: [],
@@ -126,7 +126,7 @@ const DATA = {
       description:
         "TCP Client and Server through Java Socket Programming and Multithreading for simulated connections. Shortest Path Calculation using Dijkstra’s algorithm and each router’s link-state database.",
       tags: ["Java", "Sockets", "Multithreading"],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP/OSPF_Simulation",
       private: false,
       youtube: "https://www.youtube.com/watch?v=30G5E18zF0g",
       images: ["/images/network1.png"],
@@ -139,7 +139,7 @@ const DATA = {
       description:
         "IoT Network Simulation in Cisco Packet Tracer demonstrating VLANs with Inter-VLAN communication configuration. Incorporated Switch and Router Trunking Protocol, DHCP.",
       tags: ["Cisco Packet Tracer", "VLAN", "DHCP", "Networking"],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP/Smart-Farm-Cisco-Packet-Tracer",
       private: false,
       youtube: "https://www.youtube.com/watch?v=wpDmKXIqebQ",
       images: [],
@@ -152,7 +152,7 @@ const DATA = {
       description:
         "iOS SwiftUI application enabling self-tracking of food and liquid intake via WatchOS and iOS devices. Incorporated Swift Data, Notifications, Widgets, Apple’s Design Principles and Supabase Authentication.",
       tags: ["SwiftUI", "iOS", "WatchOS", "Supabase", "UI UX Design"],
-      github: "https://github.com/",
+      github: "https://github.com/MichalisCYP/AquaBite",
       private: false,
       youtube: "https://www.youtube.com/watch?v=BIIFefMx91Y",
       images: ["/images/ios1.png", "/images/ios2.png", "/images/ios3.png"],
@@ -165,7 +165,7 @@ const DATA = {
       description:
         "Implemented an AVL Tree in C++ to manage and schedule processes based on priority. Ensured balanced tree structure for optimal search, insertion, and deletion operations.",
       tags: ["C++", "Data Structures", "Algorithms"],
-      github: "",
+      github: "https://github.com/MichalisCYP/AVL-Tree-Scheduler",
       private: false,
       youtube: "https://www.youtube.com/watch?v=ztVPiFrof7w",
       images: [],
@@ -185,7 +185,7 @@ const DATA = {
       ],
       description:
         "Developed a C++ client-server application for managing tasks over a network. Implemented TCP/IP socket programming and multithreading to handle multiple client connections simultaneously. Applied SOLID principles and design patterns to ensure maintainable and scalable code architecture.",
-      github: "",
+      github: "https://github.com/MichalisCYP/DSA2",
       private: false,
       youtube: "https://www.youtube.com/watch?v=-RXaqIW9RFc",
       images: ["/images/task1.png", "/images/task2.png", "/images/task3.png"],
