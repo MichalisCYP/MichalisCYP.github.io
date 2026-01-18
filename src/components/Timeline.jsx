@@ -18,7 +18,7 @@ const Timeline = () => (
             className="timeline-item flex-col"
             style={{ alignItems: "center" }}
           >
-            <img src={item.image} alt={item.alt} />
+            <img src={item.image} alt={item.alt} loading="lazy" />
             <div className="timeline-caption flex-col">
               <span className="timeline-year">{item.year}</span>
               <span className="timeline-desc">{item.desc}</span>

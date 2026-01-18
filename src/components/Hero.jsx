@@ -26,6 +26,7 @@ const Hero = () => {
               src="/images/profile.jpeg"
               alt="Profile Picture"
               className="avatar-img"
+              loading="lazy"
             />
           </div>
           {/* hero info (text + links) */}
@@ -52,6 +53,7 @@ const Hero = () => {
                   src="/images/github.svg"
                   alt="GitHub"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                  loading="lazy"
                 />
               </a>
               <span className="sep">|</span>
@@ -65,6 +67,7 @@ const Hero = () => {
                   src="/images/linkedin.svg"
                   alt="LinkedIn"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                  loading="lazy"
                 />
               </a>
               <span className="sep">|</span>
@@ -82,6 +85,7 @@ const Hero = () => {
                   src="/images/mail.svg"
                   alt="Email"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                  loading="lazy"
                 />
               </a>
               <span className="sep">|</span>
@@ -90,6 +94,7 @@ const Hero = () => {
                   src="/images/phone.svg"
                   alt="Phone"
                   style={{ width: 36, height: 36, verticalAlign: "middle" }}
+                  loading="lazy"
                 />
               </a>
             </div>
