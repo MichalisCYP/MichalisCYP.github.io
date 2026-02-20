@@ -8,12 +8,36 @@ const DATA = {
     links: {
       github: "https://github.com/MichalisCYP",
       linkedin: "https://www.linkedin.com/in/michaelkaramichalis/",
-      email: "karamichalism@cardiff.ac.uk",
+      email: "michaelkaramichalis@gmail.com",
       phone: "+357 97732341",
     },
   },
 
   projects: [
+    {
+      id: "system-design",
+      title: "Intelligent Desk Assistant",
+      description:
+        "Currently designing and developing a full-stack distributed IoT system within a group.",
+      tags: ["System Design", "Full-Stack", "IoT", "Distributed Systems"],
+      github: "https://github.com/MichalisCYP",
+      private: true,
+      images: ["/images/iotsystem1.png"],
+      dates: "Jan. 2026 - Present",
+      org: "Cardiff University",
+    },
+    {
+      id: "medical-nlp",
+      title: "Medical Text Simplification and Translation",
+      description:
+        "NLP pipeline for automatic simplification of medical texts (English & Spanish). Fine-tuned Transformer models (T5/mT5) on domain-specific datasets using PyTorch. Developed cross-lingual simplification pipeline (EN→ES) integrating neural machine translation (OPUS-MT).",
+      tags: ["NLP", "Python", "Machine Learning"],
+      github: "https://github.com/MichalisCYP",
+      private: true,
+      images: ["/images/nlp1.png", "/images/nlp2.png"],
+      dates: "Sep. 2025 - Dec. 2025",
+      org: "Cardiff University",
+    },
     {
       id: "payroll",
       title: "Custom Payroll Management Application",
@@ -38,7 +62,7 @@ const DATA = {
         "/images/AM3.png",
         "/images/AM4.png",
       ],
-      dates: "May 2025 - Present",
+      dates: "May 2025 - Sep. 2025",
       org: "Logistics Team in Cyprus",
     },
     {
@@ -67,7 +91,7 @@ const DATA = {
         "/images/SM4.jpg",
         "/images/SM5.jpg",
       ],
-      dates: "Sep 2024 - May 2025",
+      dates: "Sep. 2024 - May 2025",
       org: "University of South Wales",
       grade: "88%",
       awards: [
@@ -92,7 +116,7 @@ const DATA = {
       github: "https://github.com/MichalisCYP/SmartHotelSystem",
       private: false,
       images: ["/images/IOT1.png", "/images/IOT2.jpg", "/images/IOT3.jpg"],
-      dates: "Sep 2024 - May 2025",
+      dates: "Sep. 2024 - May 2025",
       org: "University of South Wales",
     },
     {
@@ -104,7 +128,7 @@ const DATA = {
       github: "",
       private: false,
       images: ["/images/flight1.jpeg"],
-      dates: "Sep 2024 - Dec 2024",
+      dates: "Sep. 2024 - Dec. 2024",
       org: "University of South Wales",
     },
     {
@@ -117,7 +141,7 @@ const DATA = {
       youtube: "https://www.youtube.com/watch?v=MoXTc3iP_N4",
       private: false,
       images: [],
-      dates: "Jan 2024 - Apr 2024",
+      dates: "Jan. 2024 - April 2024",
       org: "University of South Wales",
     },
     {
@@ -130,7 +154,7 @@ const DATA = {
       private: false,
       youtube: "https://www.youtube.com/watch?v=30G5E18zF0g",
       images: ["/images/network1.png"],
-      dates: "Jan 2024 - Apr 2024",
+      dates: "Jan. 2024 - April 2024",
       org: "University of South Wales",
     },
     {
@@ -143,7 +167,7 @@ const DATA = {
       private: false,
       youtube: "https://www.youtube.com/watch?v=wpDmKXIqebQ",
       images: [],
-      dates: "Sep 2024 - Jan 2025",
+      dates: "Sep. 2024 - Jan. 2025",
       org: "University of South Wales",
     },
     {
@@ -156,7 +180,7 @@ const DATA = {
       private: false,
       youtube: "https://www.youtube.com/watch?v=BIIFefMx91Y",
       images: ["/images/ios1.png", "/images/ios2.png", "/images/ios3.png"],
-      dates: "Jan 2025 - May 2025",
+      dates: "Jan. 2025 - May 2025",
       org: "University of South Wales",
     },
     {
@@ -164,12 +188,12 @@ const DATA = {
       title: "AVL Tree Scheduler Implementation",
       description:
         "Implemented an AVL Tree in C++ to manage and schedule processes based on priority. Ensured balanced tree structure for optimal search, insertion, and deletion operations.",
-      tags: ["C++", "Data Structures", "Algorithms"],
+      tags: ["C++"],
       github: "https://github.com/MichalisCYP/AVL-Tree-Scheduler",
       private: false,
       youtube: "https://www.youtube.com/watch?v=ztVPiFrof7w",
       images: [],
-      dates: "Jan 2023 - Apr 2023",
+      dates: "Jan. 2023 - April 2023",
       org: "University of South Wales",
     },
     {
@@ -189,7 +213,7 @@ const DATA = {
       private: false,
       youtube: "https://www.youtube.com/watch?v=-RXaqIW9RFc",
       images: ["/images/task1.png", "/images/task2.png", "/images/task3.png"],
-      dates: "Sep 2022 - Dec 2022",
+      dates: "Sep. 2022 - Dec. 2022",
       org: "University of South Wales",
     },
     {
@@ -201,7 +225,7 @@ const DATA = {
       github: "",
       private: false,
       images: ["/images/plsql.png"],
-      dates: "Jan 2023 - Apr 2023",
+      dates: "Jan. 2023 - Apr. 2023",
       org: "University of South Wales",
     },
   ],
@@ -211,7 +235,7 @@ const DATA = {
       degree: "MSc Advanced Computer Science",
       university: "Cardiff University",
       logo: "/images/cardiffuni.svg",
-      dates: "Sep 2025 - Sep 2026",
+      dates: "Sep. 2025 - Sep. 2026",
       modules: [
         {
           name: "Principles of Machine Learning",
@@ -249,15 +273,20 @@ const DATA = {
           ],
         },
         {
-          name: "Cloud & Database Systems Security",
-          tags: ["DevOps", "DevSecOps", "Secure Deployment"],
+          name: "Applications of Machine Learning",
+          tags: [
+            "ML Pipeline",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Reinforcement Learning",
+          ],
         },
         {
           name: "Distributed & Cloud Computing",
           tags: ["Distributed Systems", "Cloud Computing", "Security"],
         },
         {
-          name: "System Design & Internet of Thing",
+          name: "System Design & Internet of Things",
           tags: ["Systems", "IoT", "Project Management", "Architecture"],
         },
       ],
@@ -266,7 +295,7 @@ const DATA = {
       degree: "BSc Computer Science (Hons)",
       university: "University of South Wales",
       logo: "/images/usw.svg",
-      dates: "Sep 2022 - Jul 2025",
+      dates: "Sep. 2022 - Jul. 2025",
       grade: "First-Class Honours - 86.25%",
       awards: [
         "British Computer Society Award for Outstanding Performance",
@@ -318,7 +347,7 @@ const DATA = {
     },
     {
       degree: "Cyprus High School Apolyterion, Cyprus",
-      dates: "Sep 2018 - Jun 2021",
+      dates: "Sep. 2018 - Jun. 2021",
       logo: "/images/kykkos.png",
       university: "Kykkos A' Lyceum",
       grade: "18.50/20.00 - Graduated with Honours",
@@ -348,7 +377,7 @@ const DATA = {
     {
       role: "Student IT Support Agent",
       org: "University of South Wales",
-      dates: "Sep 2024 - Jun 2025",
+      dates: "Sep. 2024 - Jun. 2025",
       bullets: [
         {
           text: "Efficiently resolved and diagnosed software and network issues.",
@@ -363,7 +392,7 @@ const DATA = {
     {
       role: "Student Digital Mentor",
       org: "University of South Wales",
-      dates: "Jan 2024 – Jun 2025",
+      dates: "Jan. 2024 - Jun. 2025",
       bullets: [
         {
           text: "Mentored students for academic and technology related advice.",
@@ -378,7 +407,7 @@ const DATA = {
     {
       role: "Soldier",
       org: "Cyprus National Guard",
-      dates: "Jul 2021 - Aug 2022",
+      dates: "Jul. 2021 - Aug. 2022",
       bullets: [
         {
           text: "Awarded the honorary rank of Lance Corporal for exceptional performance and conduct.",

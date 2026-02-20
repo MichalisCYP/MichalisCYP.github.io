@@ -6,17 +6,26 @@ import DATA from "../data";
 const TAG_CATEGORIES = [
   {
     name: "Languages",
-    tags: ["C++", "C# .NET", "JavaScript", "Java", "PL/SQL", "SwiftUI", "SQL"],
+    tags: [
+      "C++",
+      "C# .NET",
+      "JavaScript",
+      "Java",
+      "PL/SQL",
+      "SwiftUI",
+      "SQL",
+      "Python",
+    ],
   },
   {
     name: "Software Engineering",
     tags: [
       "Full-Stack",
+      "System Design",
       "Design Patterns",
       "SOLID Principles",
       "Multithreading",
-      "Algorithms",
-      "Data Structures",
+      "Distributed Systems",
     ],
   },
   {
@@ -52,6 +61,13 @@ const TAG_CATEGORIES = [
       "Sockets",
       "Networking",
       "DHCP",
+    ],
+  },
+  {
+    name: "AI & ML",
+    tags: [
+      "Machine Learning",
+      "NLP",
     ],
   },
 ];
@@ -199,7 +215,7 @@ const Projects = () => {
                           setFilters((prev) =>
                             isActive
                               ? prev.filter((t) => t !== tag)
-                              : [...prev, tag]
+                              : [...prev, tag],
                           );
                         }}
                         aria-pressed={isActive}
